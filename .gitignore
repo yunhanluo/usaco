@@ -33,3 +33,4 @@
 # Compiled solution binaries
 **/solution
 **/solution.dSYM
+.vscode/tasks.json
