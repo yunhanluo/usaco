@@ -28,5 +28,8 @@
 
 # Executables
 *.exe
-*.out
 *.app
+
+# Compiled solution binaries
+**/solution
+**/solution.dSYM
