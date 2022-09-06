@@ -1,8 +1,15 @@
 void pv(vector<int> v) {
-  for (int i=0; i<v.size(); i++) {
-    cout << v[i] << " ";
+  for (auto &i : v) {
+    cout << i << " ";
   }
   cout << endl;
+}
+
+void ps(set<int> s) {
+    for (auto &i : s) {
+        cout << i << " ";
+    }
+    cout << endl;
 }
 
 void pa(int a[], int length) {
