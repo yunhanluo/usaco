@@ -1,0 +1,71 @@
+/*
+ID: y2
+TASK: prefix
+LANG: C++
+*/
+#include <fstream>
+#include <string>
+#include <vector>
+#include <bitset>
+#include <iostream>
+#include <algorithm>
+#include <unordered_set>
+#include <map>
+#include <set>
+using namespace std;
+
+int main(){
+    ifstream fin("prefix.in");
+    ofstream fout("prefix.out");
+    set<string> shortstring;
+    for(;;){
+        string ploop;
+        fin >> ploop;
+        if(ploop == "."){
+            break;
+        }
+        shortstring.insert(ploop);
+    }
+    set<string> longstring;
+    set<string> finalstring;
+    string poooop;
+    string temp;
+    while(getline(fin, temp)){
+        poooop += temp;
+    }
+    longstring.insert(poooop);
+    // The clark is not blark;. But chickIN Z r jretrunin' in Plurping. Do you think that pineapples should be put on pizza????????I do,. 
+    for(;;){
+        set<string> newstring;
+        
+        for(auto ls : longstring){
+            bool changed = false;
+            for(auto ss : shortstring){
+                if(ls.find(ss) == 0
+                ){
+                    changed = true;
+                    string ts = ls;
+                    ts.replace(0, ss.length(), "");
+                    newstring.insert(ts);
+                }
+            }
+            if (!changed) {
+                finalstring.insert(ls);
+            }
+        }
+        if(!newstring.empty()){
+            longstring = newstring; 
+        } else {
+            break;
+        }
+    } 
+    int minlenghth = 2147483647;
+    
+
+    for(auto poop : finalstring){
+        if(poop.length() < minlenghth){
+            minlenghth = poop.length();
+        }
+    } 
+    fout << poooop.length() - minlenghth << endl;
+}
