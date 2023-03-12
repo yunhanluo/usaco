@@ -28,3 +28,8 @@ int main()
 * map, set: O(log N)
 * unordered_map, unordered_set: O(1)
 * bool array[]: O(1)
+
+
+### Data Structure
+
+* array intilization: global variable intialized with ZEROES. Not local variables. 
