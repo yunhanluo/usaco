@@ -32,4 +32,4 @@ int main()
 
 ### Data Structure
 
-* array intilization: global variable intialized with ZEROES. Not local variables.  Do array<int, 5> gadooky = {};
+* array intilization: global variable intialized with ZEROES. Not local variables.  Do array<int, 5> gadooky = {}; or array<int, 5> gadooky{};
